@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pizzaria do Picão</title>
+</head>
+
+
+<body>
+    <div>
+      <h1>Bem-vindo à Pizzaria do Picão!</h1>
+      <p>
+        A melhor pizza da cidade, feita com ingredientes frescos e muito amor.
+      </p>
+      <img src="images (1).png" alt="Deliciosa pizza" width="300" />
+      <h2>Nosso Cardápio</h2>
+    </div>
+    <form method="post" action="cadastropizzaria.php">
+        <div>
+        <ul>
+            <label for="grande">PIZZA GRANDE............R$79,90</label>
+            <label for="media">PIZZA MÉDIA............R$59,90</label>
+            <label for="pequena">PIZZA PEQUENA............R$39,90</label>
+            <label for="sprite">SPRITE 2L............R$10,95</label>
+            <label for="coca">COCA COLA 2L............R$17,45</label>
+            <label for="mautecouro">MAUTE COURO 2L............R$9,90</label>
+        </ul>
+        </div>
+
+
+
+        <label for="pizza">Sabores de Pizzas:</label>
+        <select name="tipo_pizza">
+            <option>SELECIONE</option>
+            <option>MUSSARELA</option>
+            <option>CALABRESA</option>
+            <option>PORTUGUESA</option>
+            <option>FRANGO COM CATUPIRY</option>
+            <option>QUATRO QUEIJOS</option>
+            <option>CHOCOLATE</option>
+        </select><br>
+        <hr>
+        
+        <div>
+        <label for="tamanho">ESCOLHA O TAMANHO DA PIZZA:</label>
+        <select name="tamanho" id="tamanho">
+            <option value="grande">GRANDE</option>
+            <option value="media">MÉDIA</option>
+            <option value="pequena">PEQUENA</option>
+        </select>
+        </div>
+        <div>
+        <label for="refri">ESCOLHA SEU REFRIGERANTE:</label>
+        <select name="refri" id="refri">
+            <option value="sprite">SPRITE 2L</option>
+            <option value="coca">COCA COLA 2L</option>
+            <option value="mautecouro">MAUTE COURO 2L</option>
+        </select>
+        </div>
+        <footer>
+        <h2>Contato</h2>
+        <p>Telefone: (11) 1234-5678</p>
+        <p>Endereço: Rua das Pizzas, 123 - São Paulo, SP</p>
+        </footer>
+    </form>
+
+
+</body>
+</html>
