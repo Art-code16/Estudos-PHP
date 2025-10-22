@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pizzaria do Picão</title>
+  </head>
+
+  <body style="background-color: #44271F;">
+    <font style="text-align: center" color="white">
+      <div >
+        <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Bem-vindo à Pizzaria do Picão!</h1>
+        <p style="font-family: 'Courier New', Courier, monospace;">
+          A melhor pizza da cidade, feita com ingredientes frescos e muito amor.
+        </p>
+
+      <form method="post" action="ProjetoPHP.php">
+        <div style="display: flex; align-items: center; justify-content: center;">
+            <div>
+                <img src="images (1).png" alt="Deliciosa pizza" width="300" style="border-radius: 20px; box-shadow: 0 2px 20px 0;" />
+                
+            </div>
+            <div style="border: solid 5px #61542E; border-radius: 20px; background: #653B30; box-shadow: 0 2px 20px 0 black; margin-left: 20px;color: rgb(255, 255, 255); text-shadow: 2px 2px 2px rgb(15, 8, 8);">
+                <h2 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,sans-serif;">Nosso Cardápio</h2>
+            <ul>
+                <label for="grande" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">PIZZA GRANDE............R$79,90</label
+                ><br />
+
+                <label for="media"style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">PIZZA MÉDIA............R$59,90</label
+                ><br />
+
+                <label for="pequena"style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">PIZZA PEQUENA............R$39,90</label
+                ><br />
+
+                <label for="sprite"style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">SPRITE 2L............R$10,95</label
+                ><br />
+
+                <label for="coca"style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">COCA COLA 2L............R$17,45</label
+                ><br />
+
+                <label for="mautecouro"style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">MAUTE COURO 2L............R$9,90</label
+                ><br />
+                <br />
+            </ul>
+            </div>
+        </div>
+        
+        <hr />
+
+        <label for="pizza" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Sabores de Pizzas:</label>
+        <select name="tipo_pizza">
+          <option>SELECIONE</option>
+          <option>MUSSARELA</option>
+          <option>CALABRESA</option>
+          <option>PORTUGUESA</option>
+          <option>FRANGO COM CATUPIRY</option>
+          <option>QUATRO QUEIJOS</option>
+          <option>CHOCOLATE</option></select
+        ><br />
+        <hr />
+
+        <div>
+          <br />
+          <label for="tamanho" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">ESCOLHA O TAMANHO DA PIZZA:</label>
+          <select name="tamanho" id="tamanho" >
+            <option value="grande">GRANDE</option>
+            <option value="media">MÉDIA</option>
+            <option value="pequena">PEQUENA</option>
+          </select>
+        </div>
+        <br />
+
+        <div>
+          <label for="refri" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">ESCOLHA SEU REFRIGERANTE:</label>
+          <select name="refri" id="refri">
+            <option value="sprite">SPRITE 2L</option>
+            <option value="coca">COCA COLA 2L</option>
+            <option value="mautecouro">MAUTE COURO 2L</option>
+          </select>
+        </div>
+        <div>
+            
+            <input type="submit" onclick="calcular_preco()" value="Enviar" id="enviar">
+            <input type="reset" value="Limpar" id="limpar">
+        </div>
+        <hr />
+
+        <footer>
+          <h2>Contato</h2>
+          <p>Telefone: (11) 1234-5678</p>
+          <p>Endereço: Rua das Pizzas, 123 - São Paulo, SP</p>
+        </footer>
+      </form>
+    </font>
+  </body>
+</html>
