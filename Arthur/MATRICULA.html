@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Davi Lucas Pereira Nonato">
+    <meta name="viewport" content="width=device-width, initial-scale= 1.0">
+    <title>Matricula do Aluno</title>
+
+    <link rel="stylesheet" href="estilo.CSS">
+    <link rel="icon" href="matricula.png">
+    <script type="text/javascript" src="codigo.JS"></script>
+</head>
+
+<body class="matricula-body">
+    <fieldset class="field-matricula2">
+        <h2 class="h2-matricula">MATRICULA</h2>
+    </fieldset>
+
+    <p>
+        <strong class="strong-matricula"> Preencha os dados da matricula:</strong>
+
+    <fieldset class="field-matricula">
+
+        <legend class="legend-matricula">MATRICULA</legend>
+
+        <form name="formmatricula" onsubmit="testa_form_matricula()" method="post" action="#">
+            <label class="label-nome-matricula" for="aluno_matricula">Nome:</label>
+            <input class="input-nome-matricula" type="text" name="CADASTRO ALUNO" id="aluno" style="width: 310px;">
+            <br>
+            <br>
+
+            <label class="label-e-mail-matricula" for="e-mail">Digite seu e-mail:</label>
+            <input class="input-e-mail-matricula" type="text" name="e-mail" id="e-mail" style="width: 310px;">
+            <br>
+            <br>
+
+            <label class="label-data-matricula" for="data">Data de Nacimento:</label>
+            <input class="input-data-matricula" type="date" name="data" id="data">
+            <br>
+            <br>
+
+            <label class="label-telefone-matricula" for="telefone">Numero de contato:</label>
+            <input class="input-telefone-matricula" type="text" id="telefone" name="telefone"
+                placeholder="(##) #####-####" autocomplete="off" style="width: 110px;" data-mask="numero-matricula"
+                oninput="mascara_matricula(this)">
+            <br>
+            <br>
+
+            <label class="label-telefone-responsavel-matricula" for="telefone do responsavel">Numero de um
+                responsavel:</label>
+            <input class="input-telefone-responsavel-matricula" type="text" id="telefone do responsavel"
+                name="telefone do responsavel" placeholder="(##) #####-####" autocomplete="off" style="width: 110px;"
+                data-mask="responsavel-matricula" oninput="mascara_matricula(this)">
+            <br>
+            <br>
+
+            <label class="label-cpf-matricula" for="cpf">CPF:</label>
+            <input class="input-cpf-matricula" type="text" id="cpf" placeholder="###.###.###-##" autocomplete="off"
+                style="width: 110px;" data-mask="cpf-matricula" oninput="mascara_matricula(this)"> <br>
+            <!-- A tag <small> no HTML é usada para indicar texto em menor destaque -->
+            <small class=""><strong> (Sem espaços, pontos, traços ou vírgulas)</strong></small>
+            <br>
+            <br>
+
+            <label class="label-cep-matricula" for="cep">CEP:</label>
+            <input class="input-cep-matricula" type="text" id="cep" placeholder="#####-###" autocomplete="off"
+                style="width: 80px;" data-mask="cep-matricula" oninput="mascara_matricula(this)">
+            <br>
+            <br>
+
+            <label class="label-complemento-matricula" for="complemento">Complemento:</label>
+            <input class="input-complemento-matricula" type="text" id="complemento" name="complemento"
+                style="width: 310px;">
+            <br>
+            <br>
+
+
+
+        </form>
+
+        <input class="limpar-matricula" type="reset" value="Limpar">
+        <input class="enviar-matricula" type="submit" value="enviar">
+        <a href="index big.html" class="voltar-matricula">voltar</a>
+        <br>
+        <br>
+    </fieldset>
+    <p class="p-matricula">
+        <strong>Para alguma duvida consulte o numero: (31) 97362-2673</strong>
+    </p>
+    <footer class="footer-matricula">
+        <p>
+            <a href="mailto:davilucas6239@gmail.com">Author: Arthur Felipe A. Santos</a>
+        </p><br>
+        ART Qualidade & Desenvolvimento LTDA <br>
+        todos os direitos reservados
+
+    </footer>
+    </p>
+</body>
+
+</html
