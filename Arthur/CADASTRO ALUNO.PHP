@@ -16,7 +16,7 @@
 <!-- Menu de navegação -->
 <ul class="menu">
     <li class="menu-item"><a href="index.html">PÁGINA INICIAL</a></li>
-    <li class="menu-item"><a href="cadastro_aluno.html">CADASTRAR ALUNO</a></li>
+    <li class="menu-item"><a href="CADASTRO_ALUNO.html">CADASTRAR ALUNO</a></li>
 </ul>
 
 <br>
@@ -51,25 +51,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //  Início do bloco try/catch para capturar possíveis erros de execução
     //  no momento da inserção no banco de dados.
     // ---------------------------------------------------------------------
-    try {
+    $sql = "INSERT INTO aluno 
+        (aluno, data_nasc, sexo, cpf, endereco, complemento, bairro, cidade, telefone)
+        VALUES (:aluno, :data_nasc, :sexo, :cpf, :endereco, :complemento, :bairro, :cidade, :telefone)";
 
-        // -----------------------------------------------------------------
-        //  Monta a instrução SQL completa de inserção.
-        //  Nesta versão simplificada, os valores são colocados diretamente no SQL.
-        // -----------------------------------------------------------------
-        $sql = "INSERT INTO aluno 
-                (aluno, data_nasc, sexo, cpf, endereco, complemento, bairro, cidade, telefone)
-                VALUES (
-                    '$nome',
-                    '$data_nasc',
-                    '$sexo',
-                    '$cpf',
-                    '$endereco',
-                    '$complemento',
-                    '$bairro',
-                    '$cidade',
-                    '$telefone'
-                )";
+$stmt = $conexao->prepare($sql);
+
+$stmt->execute([
+    ':aluno' => $nome,
+    ':data_nasc' => $data_nasc,
+    ':sexo' => $sexo,
+    ':cpf' => $cpf,
+    ':endereco' => $endereco,
+    ':complemento' => $complemento,
+    ':bairro' => $bairro,
+    ':cidade' => $cidade,
+    ':telefone' => $telefone
+]);
+
 
         // -----------------------------------------------------------------
         //  Executa o comando SQL diretamente com o método exec().
@@ -98,4 +97,6 @@ $conexao = null;
 ?>
 
 </body>
+</html>
+
 </html>
