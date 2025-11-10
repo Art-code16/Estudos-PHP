@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Arthur Felipe Almeida dos Santos">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro do Professor</title>
+    <link rel="stylesheet" href="estilo.CSS">
+
+    <script type="text/javascript" src="codigo.JS"></script>
+    <link rel="icon" href="professor.jpg">
+</head>
+
+<body class="body-professor">
+    <fieldset class="fieldset-prof">
+        <h2 class="h2-professor">CADASTRO PARA PROFESSOR</h2>
+    </fieldset>
+
+
+    <p>
+        <br>
+        <strong class="strong-professor">Preencha os dados do(a) professor(a):</strong>
+
+    <fieldset class="fieldset-professor">
+
+        <legend class="legend-professor">CADASTRO DE PROFESSOR </legend>
+
+        <form name="formprofessor" onsubmit="testa_form_professor()" method="post" action="#">
+            <label class="label-nome-professor" for="professor">Nome do Professor (a):</label>
+            <input class="input-professor" type="text" name="CADASTRO PROFESSOR" id="professor" style="width: 310px;">
+            <br>
+            <br>
+
+            <label class="label-data-professor" for="data">Data de Nacimento:</label>
+            <input class="input-data-professor" type="date" name="data" id="data">
+            <br>
+            <br>
+
+            <label class="label-sexo-professor" for="sexo">Sexo:</label>
+            <input class="input-radio-masculino-professor" type="radio" id="masculino" name="sexo" value="masculino">
+            <label class="label-masculino-professor" for="masculino">Masculino</label>
+            <input class="input-radio-feminino-professor" type="radio" id="feminino" name="sexo" value="feminino">
+            <label class="label-feminino-professor" for="feminino">Feminino</label>
+            <input class="input-radio-outro-professor" type="radio" id="outro" name="sexo" value="outro">
+            <label class="label-outro-professor" for="outro">Outro</label>
+            <br>
+            <br>
+
+
+            <label class="label-cpf-professor" for="cpfprofessor">CPF:</label>
+            <input class="input-cpf-professor" type="text" id="cpf" placeholder="###.###.###-##" autocomplete="off"
+                style="width: 110px;" data-mask="cpf-professor" oninput="mascara_professor(this)"> <br>
+            <!-- A tag <small> no HTML é usada para indicar texto em menor destaque -->
+            <small><strong> (Sem espaços, pontos, traços ou vírgulas)</strong></small>
+            <br>
+            <br>
+
+            <label class="label-formação-professor" for="materia">Formação:</label>
+            <input class="input-formação-professor" type="text" name="materia" id="materia" style="width: 310px;">
+            <br>
+            <br>
+
+            <label class="label-cep-professor" for="cep">CEP:</label>
+            <input class="input-cep-professor" type="text" id="cep" placeholder="#####-###" autocomplete="off"
+                style="width: 80px;" data-mask="cep-professor" oninput="mascara_professor(this)">
+            <br>
+            <br>
+
+            <label class="label-endereço-professor" for="endereco">Endereço:</label>
+            <input class="input-endereço-professor" type="text" id="endereco" name="endereco" style="width: 310px;">
+            <br>
+            <br>
+
+            <label class="label-bairro-professor" for="bairro">Bairro:</label>
+            <select class="select-bairro-professor" name="bairro" id="bairro">
+                <option value="">Selecione o Bairro</option>
+                <option value="Centro">Centro</option>
+                <option value="Jardim">Jardim</option>
+                <option value="Vila">Vila</option>
+                <option value="São João">São João</option>
+                <option value="São Pedro">São Pedro</option>
+                <option value="Asteca">Asteca</option>
+                <option value="São Benedito">São Benedito</option>
+                <option value="Pedra Branca">Pedra Branca</option>
+                <option value="Severina">Severina</option>
+                <option value="Vida Nova">Vida Nova</option>
+                <option value="Ribeirão das Neves">Ribeirão das Neves</option>
+                <option value="Tocantis">Tocantis</option>
+                <option value="Landin">Landin</option>
+            </select>
+            <br>
+            <br>
+
+            <label class="label-cidade-professor" for="cidade">Cidade:</label>
+            <select class="select-cidade-professor" name="cidade" id="cidade">
+                <option value="">Selecione a Cidade</option>
+                <option value="Belo Horizonte">Belo Horizonte</option>
+                <option value="Pintopolis">Pintopolis</option>
+                <option value="Betim">Betim</option>
+                <option value="Ribeirão das Neves">Ribeirão das Neves</option>
+            </select>
+            <br>
+            <br>
+
+            <label class="label-complemento-professor" for="complemento">Complemento:</label> <br>
+            <input class="input-complemento-professor " type="text" id="complemento" name="complemento"
+                style="width: 310px;">
+            <br>
+            <br>
+
+
+            <label class="label-telefone-professor" for="telefone"> Telefone</label>
+            <input class="input-telefone-professor" type="text" id="telefone" name="telefone"
+                placeholder="(##) #####-####" autocomplete="off" style="width: 110px;" data-mask="telefone-professor"
+                oninput="mascara_professor(this)"> <br>
+            <br>
+            <br>
+
+            <input class="input-limpar-professor" type="reset" value="Limpar">
+            <input class="input-enviar-professor" type="submit" value="enviar">
+            <a class="input-voltar-professor" href="index big.html" target="_self" rel="prev">voltar</a>
+
+
+
+
+        </form>
+    </fieldset>
+    <br>
+    <p class="p-professor">
+        <strong>Para alguma duvida consulte o numero: (31) 97362-2673</strong>
+    </p>
+    <footer>
+        <p style="text-align: center;">
+            <a href="mailto:davilucas6239@gmail.com">Author: Arthur Felipe A. Santos</a>
+        </p><br>
+        ART Qualidade & Desenvolvimento LTDA <br>
+        todos os direitos reservados
+
+    </footer>
+    </p>
+</body>
+
+</html
